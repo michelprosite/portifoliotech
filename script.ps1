@@ -1,0 +1,1 @@
+pip install bootstrap4 dj-database-url dj-static django django-stdimage fontawesomefree gunicorn static whitenoise

@@ -1,0 +1,45 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="../static/css/style.css">
+<link rel="stylesheet" href="{%static 'css/navbar-top-fixed.css'%}">
+
+<!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+<link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+
+ <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+ <script src="{% static 'fontawesomefree/js/fontawesome.js' %}"></script>
+ <script src="{% static 'fontawesomefree/js/solid.js' %}"></script>
+ <script src="{% static 'fontawesomefree/js/brands.js' %}"></script>
+
+ <!-- One file includes all the Font Awesome Free icons and utilities -->
+ <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+ <link rel="shortcut icon" href="{%static 'img/history.png'%}" type="image/x-icon">
+ 
+<title>Portifólio</title>
+</head>
+<body class="bg-dark p-0 m-0">
+
+    {%include 'header.html'%}
+
+    {%include 'main.html'%}
+
+    {%include 'aside.html'%}
+
+    {%include 'footer.html'%}
+   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>

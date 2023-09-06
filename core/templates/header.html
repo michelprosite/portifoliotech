@@ -1,0 +1,35 @@
+{%load static%}
+<link href="{% static 'assets/dist/css/bootstrap.min.css'%}" rel="stylesheet">
+<header class="mb-4 p-0">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark p-0">
+    <div class="container-fluid bg-site p-3">
+      <a class="navbar-brand" href="#">Michel Souza Santana</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{%url 'index'%}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'projetos'%}">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Acadêmico</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Certificados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Currículo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contatos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<script src="{%static 'assets/dist/js/bootstrap.bundle.min.js'%}"></script>

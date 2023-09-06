@@ -1,0 +1,17 @@
+{%load static%}
+<div class="container px-4 py-5" id="icon-grid">
+    <h2 class="pb-2 border-bottom text-light">Conhecimento Tecnológico</h2>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5 text-light">
+
+        {%for c in conhecimentos%} 
+        <div class="col d-flex align-items-start">
+            <p class="mr-2"><span class="d-flex justify-content-start mt-0" style="font-size: 3rem;"><i class='{{c.icone}}'></i></span></p>
+            <div>
+                <h4 class="fw-bold mb-0">{{c.titulo}}</h4>
+                <p>{{c.descricao}}</p>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</div>

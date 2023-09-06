@@ -1,0 +1,32 @@
+{%load static%}
+<div class="album py-5 bg-site">
+    <div class="container">
+        <h2 class="py-3 text-light">Pricipais Projetos</h2>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        {%for prin in principais%}
+        {%if prin.peso > 7%}
+        <div class="col col-md-4 h-100 mb-3">
+            <div class="card shadow-sm bg-dark text-light">
+                <img src="{{prin.imagem.thumb.url}}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                <div class="card-body h-100">
+                    <h2>{{prin.titulo}}</h2>
+                    <p class="card-text">{{prin.comentario}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a href="{{prin.urlgit}}" type="button" class="btn btn-sm btn-outline-secondary">GitHub</a>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">OnLine</button>
+                        </div>
+                        <small class="text-muted">{{prin.modificado}}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {%endif%}
+        {%endfor%}
+
+    </div>
+    </div>
+</div>

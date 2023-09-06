@@ -1,0 +1,68 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="../static/css/style.css">
+<link rel="stylesheet" href="{%static 'css/navbar-top-fixed.css'%}">
+
+<!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+<link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+
+ <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+ <script src="{% static 'fontawesomefree/js/fontawesome.js' %}"></script>
+ <script src="{% static 'fontawesomefree/js/solid.js' %}"></script>
+ <script src="{% static 'fontawesomefree/js/brands.js' %}"></script>
+
+ <!-- One file includes all the Font Awesome Free icons and utilities -->
+ <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+ <link rel="shortcut icon" href="{%static 'img/atom.png'%}" type="image/x-icon">
+ 
+<title>Projetos</title>
+</head>
+<body class="bg-dark p-0 m-0">
+
+    {%include 'header.html'%}
+
+    <main class="container py-5">
+        <div class="pb-3 mb-4 border-bottom pt-3">
+            <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                <img src="{%static 'img/atom.png'%}" alt="" width="7%">
+                <span class="text-light"><h1>Meus Projetos</h1></span>
+            </a>
+        </div>
+
+        <div class="row align-items-md-stretch">
+            {%for pr in projetos%} 
+            <div class="col-md-6">
+                <div class="h-100 p-4 bg-site shadow rounded-3 text-secondary">
+                    <img class="rounded" src="{%static 'img/weScraping.jpg'%}" width="100%" height="250px" alt="">
+                    <h2 class="text-info my-2">{{pr.titulo}}</h2>
+                    <p class="text-muted text-justify">{{pr.comentario}}</p>
+                    <div class="d-flex justify-contente-between pt-2">
+                        <div>
+                            <a href="{{pr.urlgit}}" class="btn btn-outline-info" type="button" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="{{pr.urlsite}}" class="btn btn-outline-info" type="button" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                        </div>
+                        <span class="ml-auto mr-0 text-info">Concluído em: {{pr.dataConclusao}}</span>
+                    </div>
+                    
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </main>
+   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
